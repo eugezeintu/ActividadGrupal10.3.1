@@ -22,12 +22,12 @@ function mostrarLista() {
   let contenedor = document.getElementById("contenedor");
   contenedor.innerHTML = ""; // limpiar lista previa
 
-  lista.forEach((item) => {
-    let li = document.createElement("li");
-    li.className = "list-group-item";
-    li.textContent = item;
-    contenedor.appendChild(li);
-  });
+ for (let i = 0; i < lista.length; i++) {
+  let li = document.createElement("li");
+  li.className = "list-group-item";
+  li.textContent = lista[i];   // usamos lista[i] en lugar de item
+  contenedor.appendChild(li);
+}
 }
 
 // --- Agregar nuevo ítem ---
