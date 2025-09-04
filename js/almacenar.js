@@ -1,12 +1,12 @@
 // --- Función para obtener la lista desde localStorage ---
 function obtenerLista() {
-  let listaGuardada = localStorage.getItem("miLista");
+  let listaGuardada = localStorage.getItem("laLista");
   return listaGuardada ? JSON.parse(listaGuardada) : [];
 }
 
 // --- Función para guardar lista en localStorage ---
 function guardarLista(lista) {
-  localStorage.setItem("miLista", JSON.stringify(lista));
+  localStorage.setItem("laLista", JSON.stringify(lista));
 }
 
 // --- Función para mostrar lista en la página ---
@@ -39,7 +39,7 @@ document.getElementById("agregar").addEventListener("click", function () {
 
 // --- Limpiar lista ---
 document.getElementById("limpiar").addEventListener("click", function () {
-  localStorage.removeItem("miLista"); // eliminar del storage
+  localStorage.removeItem("laLista"); // eliminar del storage
   mostrarLista();                     // refrescar vista
 });
 
