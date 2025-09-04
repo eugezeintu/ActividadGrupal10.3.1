@@ -1,7 +1,14 @@
 // --- Función para obtener la lista desde localStorage ---
 function obtenerLista() {
-  let listaGuardada = localStorage.getItem("laLista");
-  return listaGuardada ? JSON.parse(listaGuardada) : [];
+ let listaGuardada = localStorage.getItem("miLista");
+
+ if (listaGuardada) {
+  // Si hay algo guardado, lo convertimos de JSON a array
+  return JSON.parse(listaGuardada);
+ } else {
+  // Si no hay nada, devolvemos un array vacío
+  return [];
+ }
 }
 
 // --- Función para guardar lista en localStorage ---
